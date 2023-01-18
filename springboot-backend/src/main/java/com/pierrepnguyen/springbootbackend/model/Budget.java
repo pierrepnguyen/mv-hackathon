@@ -28,6 +28,10 @@ public class Budget {
   @Column(name = "date")
   private String date;
 
+  public Budget(){
+    
+  }
+
   public Budget(String title, float amount, String description, String date){
     super();
     this.title = title;
