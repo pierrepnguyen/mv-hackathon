@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+
+import BudgetService from '../services/BudgetService'
+import {withRouter} from '../services/withRouter'
 
 class AllBudgets extends Component {
   constructor(props){
@@ -7,6 +11,12 @@ class AllBudgets extends Component {
     this.state = {
       expenses : []
     }
+  }
+
+  componentDidMount(){
+    BudgetService.getBudgets().then((res)=>{
+      this.setState({expenses: res.data})
+    })
   }
   
   render() {
@@ -19,10 +29,12 @@ class AllBudgets extends Component {
         <div className='expenseTable'>
           <table>
             <thead>
-              <tr>Expense Title</tr>
-              <tr>Expense Amount</tr>
-              <tr>Expense Category</tr>
-              <tr>Actions</tr>
+              <tr>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Actions</th>
+              </tr>
             </thead>
             <tbody>
               {
@@ -32,6 +44,11 @@ class AllBudgets extends Component {
                     <td>{expense.title}</td>
                     <td>{expense.amount}</td>
                     <td>{expense.category}</td>
+                    <td>
+                      <button>Update</button>
+                      <button>Delete</button>
+                      <button>View</button>
+                    </td>
                   </tr>
                 )
               }
@@ -43,4 +60,4 @@ class AllBudgets extends Component {
   }
 }
 
-export default AllBudgets;
+export default withRouter(AllBudgets);
