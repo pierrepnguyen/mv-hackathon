@@ -16,6 +16,9 @@ class CreateExpense extends Component {
       date: '',
       category: ''
     }
+
+    this.changeHandler = this.changeHandler.bind(this)
+    this.saveExpense = this.saveExpense.bind(this)
   }
 
   saveExpense=async(e)=>{

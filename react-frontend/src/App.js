@@ -7,6 +7,7 @@ import Header from './components/Header'
 import AllBudgets from './components/AllBudgets';
 import ViewExpense from './components/ViewExpense';
 import CreateExpense from './components/CreateExpense';
+import UpdateExpense from './components/UpdateExpense';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
             <Route exact path='/' element={<AllBudgets/>}></Route>
             <Route exact path='/view-all' element={<AllBudgets/>}></Route>
             <Route path='/add-expense' element={<CreateExpense/>}></Route>
-            {/* <Route path='/update-expense/:id' element={<UpdateExpense/>}></Route> */}
+            <Route path='/update-expense/:id' element={<UpdateExpense/>}></Route>
             <Route path='/view-expense/:id' element={<ViewExpense/>}></Route>
           </Routes>
         </div>
