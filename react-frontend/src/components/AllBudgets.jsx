@@ -23,7 +23,7 @@ class AllBudgets extends Component {
     return (
       <div>
         <h2>Monthly Budget</h2>
-        <Link>
+        <Link to='/add-expense'>
           <button>Add Expense</button>
         </Link>
         <div className='expenseTable'>
