@@ -32,11 +32,12 @@ class UpdateExpense extends Component {
       date: this.state.date,
       category: this.state.category
     }
-    console.log('new input expense =>' + JSON.stringify(expense))
-    
     // AXIOS PUT method & rerender
     BudgetService.updateBudget(expense, this.state.id)
+    console.log('new input expense =>' + JSON.stringify(expense))
+
     await this.props.navigate('/view-all')
+    
   }
 
   changeHandler=(e)=>{
