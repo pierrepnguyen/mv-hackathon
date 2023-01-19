@@ -13,6 +13,20 @@ class AllBudgets extends Component {
     }
   }
 
+  editBudget(id){
+    this.props.navigate(`/update-expense/${id}`)
+  }
+  
+  deleteBudget(id){
+    BudgetService.deleteBudget(id).then(res=>{
+      this.setState({expenses: this.state.expenses.filter(expense => expense.id !== id)})
+    })
+  }
+
+  viewBudget(id){
+    this.props.navigate(`/view-expense/${id}`)
+  }
+
   componentDidMount(){
     BudgetService.getBudgets().then((res)=>{
       this.setState({expenses: res.data})
@@ -45,9 +59,9 @@ class AllBudgets extends Component {
                     <td>{expense.amount}</td>
                     <td>{expense.category}</td>
                     <td>
-                      <button>Update</button>
-                      <button>Delete</button>
-                      <button>View</button>
+                      <button onClick={()=> this.editBudget(expense.id)}>Update</button>
+                      <button onClick={()=> this.deleteBudget(expense.id)}>Delete</button>
+                      <button onClick={()=> this.viewBudget(expense.id)}>View</button>
                     </td>
                   </tr>
                 )

@@ -25,19 +25,19 @@ public class BudgetController {
   private BudgetRepository budgetRepository;
 
   // get all
-  @GetMapping("/view-all")
+  @GetMapping("/expenses")
   public List<Budget> getAllBudgets(){
     return budgetRepository.findAll();
   }
 
   // create expense rest api
-  @PostMapping("/expense")
+  @PostMapping("/expenses")
   public Budget createBudget(@RequestBody Budget budget){
     return budgetRepository.save(budget);
   }
 
   // get expense by ID rest api
-  @GetMapping("/expense/{id}")
+  @GetMapping("/expenses/{id}")
   public ResponseEntity<Budget> getBudgetById(@PathVariable Long id){
     Budget expense = budgetRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Expense does not exist with " + id));
     return ResponseEntity.ok(expense);

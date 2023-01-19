@@ -34,7 +34,7 @@ class ViewExpense extends Component {
         </div>
         <div>
           <label>Expense Amount:</label>
-          <div>{this.state.expense.amount}</div>
+          <div>${this.state.expense.amount}</div>
         </div>
         <div>
           <label>Expense Description:</label>
@@ -48,7 +48,7 @@ class ViewExpense extends Component {
           <label>Expense Category:</label>
           <div>{this.state.expense.category}</div>
         </div>
-        <button>Back</button>
+        <button onClick={()=> this.handleBack()}>Back</button>
       </div>
     );
   }
