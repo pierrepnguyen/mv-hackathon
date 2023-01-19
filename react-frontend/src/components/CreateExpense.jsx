@@ -66,4 +66,4 @@ class CreateExpense extends Component {
   }
 }
 
-export default CreateExpense;
+export default withRouter(CreateExpense);
