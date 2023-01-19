@@ -56,7 +56,7 @@ class AllBudgets extends Component {
                   expense =>
                   <tr key={expense.id}>
                     <td>{expense.title}</td>
-                    <td>{expense.amount}</td>
+                    <td>${expense.amount}</td>
                     <td>{expense.category}</td>
                     <td>
                       <button onClick={()=> this.editBudget(expense.id)}>Update</button>

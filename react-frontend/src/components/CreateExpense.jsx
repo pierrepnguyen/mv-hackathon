@@ -35,7 +35,8 @@ class CreateExpense extends Component {
   }
 
   changeHandler=(e)=>{
-    this.setState({input: e.target.value})
+    const {name, value} = e.target;
+    this.setState({[name] : value})
   }
 
   render() {
