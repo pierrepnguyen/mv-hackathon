@@ -28,16 +28,20 @@ public class Budget {
   @Column(name = "date")
   private String date;
 
+  @Column(name = "category")
+  private String category;
+
   public Budget(){
     
   }
 
-  public Budget(String title, float amount, String description, String date){
+  public Budget(String title, float amount, String description, String date, String category){
     super();
     this.title = title;
     this. amount = amount;
     this.description = description;
     this.date = date;
+    this.category = category;
   }
 
   // GETTERS & SETTERS
@@ -79,5 +83,13 @@ public class Budget {
 
   public void setDate(String date) {
     this.date = date;
+  }
+
+  public String getCategory(){
+    return this.category;
+  }
+
+  public void setCategory(String category){
+    this.category = category;
   }
 }
