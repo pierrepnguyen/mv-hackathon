@@ -11,6 +11,17 @@ class BudgetService{
     return axios.post(BUDGET_API_BASE_URL, budget)
   }
 
+  getBudgetById(budgetId){
+    return axios.get(BUDGET_API_BASE_URL + '/' + budgetId)
+  }
+
+  updateBudget(budget, budgetId){
+    return axios.put(BUDGET_API_BASE_URL + '/' + budgetId, budget)
+  }
+
+  deleteBudget(budgetId){
+    return axios.delete(BUDGET_API_BASE_URL + '/' + budgetId)
+  }
 }
 
 export default new BudgetService()
