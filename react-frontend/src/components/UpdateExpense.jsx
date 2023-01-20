@@ -1,3 +1,5 @@
+import './styles/UpdateExpense.css'
+
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
@@ -65,15 +67,15 @@ class UpdateExpense extends Component {
           <h2>Update Expense</h2>
           <form action="post">
             <label htmlFor="">Title: </label>
-            <input type="text" placeholder='NJ Home Rent' name='title' value={this.state.title} onChange={this.changeHandler}/>
+            <input type="text" placeholder='NJ Home Rent' name='title' value={this.state.title} onChange={this.changeHandler}/> <br />
             <label htmlFor="">Amount: </label>
-            <input type="text" placeholder='1000.00' name='amount' value={this.state.amount} onChange={this.changeHandler}/>
+            <input type="text" placeholder='1000.00' name='amount' value={this.state.amount} onChange={this.changeHandler}/> <br />
             <label htmlFor="">Description: </label>
-            <input type="text" placeholder='' name='description' value={this.state.description} onChange={this.changeHandler}/>
+            <input type="text" placeholder='' name='description' value={this.state.description} onChange={this.changeHandler}/> <br />
             <label htmlFor="">Date: </label>
-            <input type="text" placeholder='1/1/23' name='date' value={this.state.date} onChange={this.changeHandler}/>
+            <input type="text" placeholder='1/1/23' name='date' value={this.state.date} onChange={this.changeHandler}/> <br />
             <label htmlFor="">Category: </label>
-            <input type="text" placeholder='Housing' name='category' value={this.state.category} onChange={this.changeHandler}/>
+            <input type="text" placeholder='Housing' name='category' value={this.state.category} onChange={this.changeHandler}/> <br />
 
             <button onClick={this.updateBudget}>Update</button>
             <Link to={'/view-all'}>

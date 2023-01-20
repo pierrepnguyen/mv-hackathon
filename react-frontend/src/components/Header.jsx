@@ -11,10 +11,10 @@ class Header extends Component {
           <h1>Budgeting and Expense tracker</h1>
           <div className='header-button'>
             <Link to='/'>
-              <button className='button-59'>Home</button>
+              <button className='button-9'>Home</button>
             </Link>
             <Link to='/add-expense'>
-              <button className='button-59'>Add Expense</button>
+              <button className='button-9'>Add Expense</button>
             </Link>
           </div>
         </header>

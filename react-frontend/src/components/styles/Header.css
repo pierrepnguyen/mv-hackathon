@@ -10,7 +10,7 @@ h1{
 
 /* BUTTON */
 
-.button-59 {
+.button-9 {
   align-items: center;
   background-color: #fff;
   border: 2px solid #000;
@@ -38,24 +38,24 @@ h1{
   margin-right: .33rem;
 }
 
-.button-59:focus {
+.button-9:focus {
   color: #171e29;
 }
 
-.button-59:hover {
+.button-9:hover {
   border-color: #06f;
   color: #06f;
   fill: #06f;
 }
 
-.button-59:active {
+.button-9:active {
   border-color: #06f;
   color: #06f;
   fill: #06f;
 }
 
 @media (min-width: 768px) {
-  .button-59 {
+  .button-9 {
     min-width: 130px;
   }
 }
