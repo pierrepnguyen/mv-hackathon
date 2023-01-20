@@ -1,5 +1,6 @@
+import './styles/AllBudgets.css'
+
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 
 import BudgetService from '../services/BudgetService'
 import {withRouter} from '../services/withRouter'
@@ -35,11 +36,8 @@ class AllBudgets extends Component {
   
   render() {
     return (
-      <div>
-        <h2>Monthly Budget</h2>
-        <Link to='/add-expense'>
-          <button>Add Expense</button>
-        </Link>
+      <div className='container'>
+        <h2>All Expenses</h2>
         <div className='expenseTable'>
           <table>
             <thead>
@@ -58,10 +56,10 @@ class AllBudgets extends Component {
                     <td>{expense.title}</td>
                     <td>${expense.amount}</td>
                     <td>{expense.category}</td>
-                    <td>
-                      <button onClick={()=> this.editBudget(expense.id)}>Update</button>
-                      <button onClick={()=> this.deleteBudget(expense.id)}>Delete</button>
-                      <button onClick={()=> this.viewBudget(expense.id)}>View</button>
+                    <td className='data-button'>
+                      <button onClick={()=> this.editBudget(expense.id)} className='button-59'>Update</button>
+                      <button onClick={()=> this.deleteBudget(expense.id)} className='button-59'>Delete</button>
+                      <button onClick={()=> this.viewBudget(expense.id)} className='button-59'>View</button>
                     </td>
                   </tr>
                 )
