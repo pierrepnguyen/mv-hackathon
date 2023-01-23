@@ -1,3 +1,5 @@
+import './styles/ExpenseForm.css'
+
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
@@ -45,25 +47,41 @@ class CreateExpense extends Component {
   render() {
     return (
       <div>
-        <div>
+        <div className='container-form'>
           <h2>Add Expense</h2>
-          <form action="post">
-            <label htmlFor="">Title: </label>
-            <input type="text" placeholder='NJ Home Rent' name='title' value={this.state.title} onChange={this.changeHandler}/> <br />
-            <label htmlFor="">Amount: </label>
-            <input type="text" placeholder='1000.00' name='amount' value={this.state.amount} onChange={this.changeHandler}/> <br />
-            <label htmlFor="">Description: </label>
-            <input type="text" placeholder='' name='description' value={this.state.description} onChange={this.changeHandler}/> <br />
-            <label htmlFor="">Date: </label>
-            <input type="text" placeholder='1/1/23' name='date' value={this.state.date} onChange={this.changeHandler}/> <br />
-            <label htmlFor="">Category: </label>
-            <input type="text" placeholder='Housing' name='category' value={this.state.category} onChange={this.changeHandler}/> <br />
+          <div className='form-container'>
+            <form action="post" className='form-style'>
+              <ul>
+                <li>
+                  <label htmlFor="">Title: </label>
+                  <input type="text" placeholder='NJ Home Rent' name='title' value={this.state.title} onChange={this.changeHandler}/>
+                </li>
+                <li>
+                  <label htmlFor="">Amount: </label>
+                  <input type="text" placeholder='1000.00' name='amount' value={this.state.amount} onChange={this.changeHandler}/>
+                </li>
+                <li>
+                  <label htmlFor="">Description: </label>
+                  <input type="text" placeholder='' name='description' value={this.state.description} onChange={this.changeHandler}/>
+                </li>
+                <li>
+                  <label htmlFor="">Date: </label>
+                  <input type="text" placeholder='1/1/23' name='date' value={this.state.date} onChange={this.changeHandler}/>
+                </li>
+                <li>
+                  <label htmlFor="">Category: </label>
+                  <input type="text" placeholder='Housing' name='category' value={this.state.category} onChange={this.changeHandler}/>
+                </li>
 
-            <button onClick={this.saveExpense}>Save</button>
-            <Link to={'/view-all'}>
-              <button>Cancel</button>
-            </Link>
-          </form>
+                <li className='button-li'>
+                  <button onClick={this.saveExpense} className='button-59'>Save</button>
+                  <Link to={'/view-all'}>
+                    <button className='button-59'>Cancel</button>
+                  </Link>
+                </li>
+              </ul>
+            </form>
+          </div>
         </div>
       </div>
     );
