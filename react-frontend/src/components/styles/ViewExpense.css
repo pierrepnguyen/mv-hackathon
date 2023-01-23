@@ -1,0 +1,22 @@
+.single-container{
+  border: 1px black solid;
+  margin: 1rem auto;
+  width: 55vw;
+}
+
+.display-container{
+  width: 60%;
+  margin: .25rem auto;
+}
+
+.display-container div{
+  border-bottom: 1px solid;
+}
+
+.display-container label{
+  font-size: small;
+}
+
+.button-container{
+  text-align: center;
+}

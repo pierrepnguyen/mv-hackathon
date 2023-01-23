@@ -1,3 +1,5 @@
+import './styles/ViewExpense.css'
+
 import React, { Component } from 'react';
 
 import { withRouter } from '../services/withRouter';
@@ -26,29 +28,31 @@ class ViewExpense extends Component {
   
   render() {
     return (
-      <div>
+      <div className='single-container'>
         <h2>Expense Details</h2>
-        <div>
-          <label>Expense Title:</label>
+        <div className='display-container'>
           <div>{this.state.expense.title}</div>
+          <label>Expense Title</label>
         </div>
-        <div>
-          <label>Expense Amount:</label>
+        <div className='display-container'>
           <div>${this.state.expense.amount}</div>
+          <label>Expense Amount</label>
         </div>
-        <div>
-          <label>Expense Description:</label>
+        <div className='display-container'>
           <div>{this.state.expense.description}</div>
+          <label>Expense Description</label>
         </div>
-        <div>
-          <label>Expense Date:</label>
+        <div className='display-container'>
           <div>{this.state.expense.date}</div>
+          <label>Expense Date</label>
         </div>
-        <div>
-          <label>Expense Category:</label>
+        <div className='display-container'>
           <div>{this.state.expense.category}</div>
+          <label>Expense Category</label>
         </div>
-        <button onClick={()=> this.handleBack()}>Back</button>
+        <div className='button-container'>
+          <button onClick={()=> this.handleBack()} className='button-59'>Back</button>
+        </div>
       </div>
     );
   }

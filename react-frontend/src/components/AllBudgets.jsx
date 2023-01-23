@@ -36,7 +36,7 @@ class AllBudgets extends Component {
   
   render() {
     return (
-      <div className='container'>
+      <div>
         <h2>All Expenses</h2>
         <div className='expenseTable'>
           <table>
