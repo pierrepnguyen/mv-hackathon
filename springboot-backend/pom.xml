@@ -8,7 +8,7 @@
 		<version>3.0.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-  <dependencyManagement>
+  <!-- <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>com.google.cloud</groupId>
@@ -18,7 +18,7 @@
         <scope>import</scope>
       </dependency>
     </dependencies>
-  </dependencyManagement>
+  </dependencyManagement> -->
 	<groupId>com.pierrepnguyen</groupId>
 	<artifactId>springboot-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -53,10 +53,10 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-    <dependency>
+    <!-- <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>spring-cloud-gcp-starter-sql-mysql</artifactId>
-    </dependency> 
+    </dependency>  -->
 	</dependencies>
 
 	<build>
