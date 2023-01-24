@@ -5,7 +5,7 @@ This was inspired by terrible budgeting and montly expenses. The project stack c
 
 
 ## Demo
-<!-- Put deployed link -->
+<!-- Put deployed link --> MORE SPECIFIC -- JAVA 19 -- WHERE TO RUN CMDS -- 
 
 ## Features
 
@@ -16,7 +16,19 @@ This was inspired by terrible budgeting and montly expenses. The project stack c
 
 ## Prerequisites
 
-Installing react dependencies
+VSCode IDE extensions:
+- Spring boot tools
+- Sring boot dashboard
+- IntelliCode
+- Debugger for Java
+- Maven for Java
+
+Technologies Versions:
+- Java version 19
+- React version 9.0+
+
+Installing react dependencies:
+Navigate to react-frontend folder
 
 ```bash
 npm i
@@ -26,8 +38,8 @@ npm i
 
 - Clone the repository
 - Install all prerequisites
-- Start Java/Spring boot project
-- Start React server
+- Start Java/Spring boot project in the Java directory
+- Start React server in the react directory
 ```
 npm start
 ```

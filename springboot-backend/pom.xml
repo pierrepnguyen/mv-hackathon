@@ -43,6 +43,10 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+  <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>spring-cloud-gcp-starter-sql-mysql</artifactId>
+      </dependency>
 
 	<build>
 		<plugins>
