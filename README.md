@@ -50,3 +50,5 @@ npm i
 ```
 npm start
 ```
+
+Local instance should automatically open. Otherwise PORT is running on 3000.
